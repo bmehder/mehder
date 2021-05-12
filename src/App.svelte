@@ -29,9 +29,9 @@
     })
 
     travel.addEventListener('click', () => {
-      const contactBox = new WinBox({
+      const travelBox = new WinBox({
         title: 'Travel Me',
-        width: '400px',
+        width: '450px',
         height: '400px',
         top: 50,
         right: 20,
@@ -106,7 +106,7 @@
       </p>
     </div>
     <div id="travel-content">
-      <h2>travel-me:$ 32<span class="cursor">|</span></h2>
+      <h2>travel-me:$ 32 countries<span class="cursor">|</span></h2>
       <ul>
         <li>England</li>
         <li>Ireland</li>
