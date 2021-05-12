@@ -66,6 +66,14 @@ nav li:hover {
   font-weight: bold;
 }
 
+nav img {
+  transition: transform 300ms ease-in-out;
+}
+
+nav img:hover {
+  transform: scale(1.1);
+}
+
 #contact img {
   width: 32px;
   height: 32px;
