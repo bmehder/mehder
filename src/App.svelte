@@ -1,68 +1,9 @@
 <script>
-  // import Nav from './Nav.svelte'
+  import Winboxes from './Winboxes.svelte'
   import Main from './Main.svelte'
-  import About from './About.svelte'
-  import Travel from './Travel.svelte'
-
-  let aboutContentElement
-  let travelContentElement
-
-  const aboutClickHandler = () => {
-    new WinBox({
-      title: 'About Me',
-      width: '400px',
-      height: '400px',
-      top: 20,
-      right: 20,
-      bottom: 20,
-      left: 20,
-      mount: aboutContentElement,
-      onfocus: function () {
-        this.setBackground('rgba(32,32,32,0.90)')
-      },
-      onblur: function () {
-        this.setBackground('rgba(32,32,32,0.60)')
-      },
-    })
-  }
-
-  const travelClickHandler = () => {
-    new WinBox({
-      title: 'Travel Me',
-      width: '450px',
-      height: '400px',
-      top: 50,
-      right: 20,
-      bottom: 20,
-      left: 100,
-      mount: travelContentElement,
-      onfocus: function () {
-        this.setBackground('rgba(32,32,32,0.90)')
-      },
-      onblur: function () {
-        this.setBackground('rgba(32,32,32,0.60)')
-      },
-    })
-  }
 </script>
 
 <div class="container">
-  <nav>
-    <ul>
-      <li on:click={aboutClickHandler}>/about</li>
-      <li on:click={travelClickHandler}>/travel</li>
-      <li>
-        <a href="https://github.com/bmehder" target="_blank">/code</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/bmehder" target="_blank"
-          ><img src="twitter.png" alt="twitter" /></a
-        >
-      </li>
-    </ul>
-  </nav>
-
+  <Winboxes />
   <Main />
-  <About bind:aboutContentElement />
-  <Travel bind:travelContentElement />
 </div>
