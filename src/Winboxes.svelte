@@ -50,6 +50,5 @@
 </script>
 
 <Nav {aboutClickHandler} {travelClickHandler} />
-
 <About bind:aboutContentElement />
 <Travel bind:travelContentElement />
