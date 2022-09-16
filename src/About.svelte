@@ -8,8 +8,8 @@
     <p>My name is Brad Mehder. I travel, code, and learn.</p>
     <p>I'm a minimilist.</p>
     <p>
-      I build websites and apps in HTML/CSS/JS. I'm also active in the
-      <a href="https://svelte.dev/" target="_blank">Svelte</a> UI Component framework
+      I am building websites and apps in Sveltekit and love being part of the
+      <a href="https://svelte.dev/" target="_blank">Svelte</a>
       community.
     </p>
   </div>
