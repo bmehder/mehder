@@ -1,0 +1,28 @@
+body { font-size: 18px; }
+
+header { margin-bottom: 0; }
+
+.navbar-toggler { border: none; }
+
+.icon-dark { fill: #343a40; }
+
+.icon-light { fill: #fff; }
+
+@media all and (orientation: portrait) {
+  body {
+    -webkit-transform: rotate(90deg); 
+    -moz-transform: rotate(90deg); 
+    -ms-transform: rotate(90deg); 
+    -o-transform: rotate(90deg); 
+    transform: rotate(90deg);
+    background: url(./img/wimbledon.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+  }
+  nav, .container{
+    display: none !important;
+  }
+}

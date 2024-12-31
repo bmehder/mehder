@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce Hosting</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #111;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h1 {
+        color: darkorange;
+        margin: 2em 0 1.5em;
+        text-align: center;
+      }
+      ul {
+        margin-bottom: 2em;
+        padding-left: 1.5em;
+      }
+      p,
+      li {
+        font-size: 1.25em;
+        line-height: 1.5em;
+      }
+      p {
+        margin-bottom: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Concierge Ecommerce Hosting</h1>
+    <p>Includes:</p>
+    <ul>
+      <li>Personal Support</li>
+      <li>Daily Database Backups</li>
+      <li>Weekly File Backups</li>
+      <li>SSL Certificate</li>
+      <li>Premium Form Plugin License</li>
+      <li>Error Log Monitoring</li>
+      <li>Fast, Reliable, Trackable Email Delivery</li>
+    </ul>
+    <div id="paypal-button-container"></div>
+    <script
+      src="https://www.paypal.com/sdk/js?client-id=Aeixc_7DZ5k9rUtdRk4NKbwzOQjjQM6WQBvc_NRwmMm2C4OQHhLGgC8wl1TWEhupkyYquRxKfSX4aA-h&vault=true"
+      data-sdk-integration-source="button-factory"
+    ></script>
+    <script>
+      paypal
+        .Buttons({
+          style: {
+            shape: 'rect',
+            color: 'gold',
+            layout: 'vertical',
+            label: 'subscribe',
+          },
+          createSubscription: function (data, actions) {
+            return actions.subscription.create({
+              plan_id: 'P-4G923439LB675722NL4TOCZA',
+            });
+          },
+          onApprove: function (data, actions) {
+            alert(data.subscriptionID);
+          },
+        })
+        .render('#paypal-button-container');
+    </script>
+  </body>
+</html>

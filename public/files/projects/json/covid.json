@@ -1,0 +1,80 @@
+[
+  {
+    "business": "Hamilton's Hammocks",
+    "address": "555 5th St",
+    "rating": 100,
+    "cat": "Retail"
+  },
+  {
+    "business": "Gasley's Gas Station",
+    "address": "123 Fake St",
+    "rating": 32,
+    "cat": "Retail"
+  },
+  {
+    "business": "Bottas Bakery",
+    "address": "321 Real St",
+    "rating": 82,
+    "cat": "Grocery"
+  },
+  {
+    "business": "Verstappen Koffieshop",
+    "address": "32 Angstschreeuw Rd.",
+    "rating": 66,
+    "cat": "Entertainment"
+  },
+  {
+    "business": "Leclerc Lounge",
+    "address": "21 Monaco Pkwy.",
+    "rating": 42,
+    "cat": "Restaurant"
+  },
+  {
+    "business": "Vettel's Violas",
+    "address": "12 Ferrari St.",
+    "rating": 75,
+    "cat": "Retail"
+  },
+  {
+    "business": "Sainz's Sunglasses",
+    "address": "99 Mexico St.",
+    "rating": 35,
+    "cat": "Retail"
+  },
+  {
+    "business": "Albon's Grocery",
+    "address": "50 Red Bull Blvd.",
+    "rating": 90,
+    "cat": "Grocery"
+  },
+  {
+    "business": "Perez Communications",
+    "address": "42 Force Jordan Point ",
+    "rating": 70,
+    "cat": "Electronics"
+  },
+  {
+    "business": "Riccardo Radios",
+    "address": "50 McLaren Underground",
+    "rating": 50,
+    "cat": "Electronics"
+  },
+  {
+    "business": "Räikkönen Liquor Store",
+    "address": "62 Alfa Romeo Way",
+    "rating": 75,
+    "cat": "Entertainment"
+  },
+  {
+    "business": "Kvyat Watt What?",
+    "address": "23 Alpha Tauri Rd",
+    "rating": 40,
+    "cat": "Electronics"
+  },
+  {
+    "business": "Bernie's Bathrooms",
+    "address": "100 Year Old Place",
+    "rating": 10,
+    "cat": "Retail"
+  }
+]

@@ -1,0 +1,26 @@
+* {color: yellow}
+body { background-color: black; }
+input { color: black; }
+
+.ninja{ display: none }
+
+/* STAND */
+#dealer-stand, #player-stand {
+  background: #f00;
+}
+
+/* CARDS */
+#dealer-cards, #player-cards, .standard {
+  float: left;
+  max-width: 200px;
+  margin-right: 2em;
+}
+div.card {
+  font-size: 2em;
+  text-align: center;
+  border: 1px solid #aaa;
+  margin-bottom: 10px;
+}
+#dealer-first-b {
+  background: #666;
+}

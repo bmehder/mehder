@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARM Monthly Web Hosting</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="paypal-button-container"></div>
+    <script
+      src="https://www.paypal.com/sdk/js?client-id=Aeixc_7DZ5k9rUtdRk4NKbwzOQjjQM6WQBvc_NRwmMm2C4OQHhLGgC8wl1TWEhupkyYquRxKfSX4aA-h&vault=true"
+      data-sdk-integration-source="button-factory"
+    ></script>
+    <script>
+      paypal
+        .Buttons({
+          style: {
+            shape: 'pill',
+            color: 'gold',
+            layout: 'vertical',
+            label: 'subscribe',
+          },
+          createSubscription: function (data, actions) {
+            return actions.subscription.create({
+              plan_id: 'P-0UT76101AP162353DL3EBQAA',
+            });
+          },
+          onApprove: function (data, actions) {
+            alert(data.subscriptionID);
+          },
+        })
+        .render('#paypal-button-container');
+    </script>
+  </body>
+</html>

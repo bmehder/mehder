@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f9b9b7;
+  font-family: sans-serif;
+  transition: background 0.8s ease;
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.intro-text h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.bg-active .intro-text h1,
+.bg-active .intro-text p {
+  color: #fff;
+  transition: color 0.8s ease;
+}
+
+.intro-text p {
+  font-size: 22px;
+  transition: color 0.8s ease;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.page2 {
+  text-align: center;
+  width: 70%;
+}
+.page2 h1 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: #111;
+}
+
+.page2 p {
+  color: #111;
+}
+
+.bg-active .page2 h1,
+.bg-active .page2 p {
+  color: #fff;
+  transition: color 0.8s ease;
+}
+
+section img {
+  width: 90%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.bg-active {
+  background-color: #111;
+}

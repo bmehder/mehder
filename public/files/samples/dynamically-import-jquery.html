@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamically Import jQuery Example</title>
+    <style>
+      body {
+        display: grid;
+        place-content: center;
+        min-height: 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.5rem;
+        text-align: center;
+      }
+      button {
+        padding: 1rem 2rem;
+        background-color: dodgerblue;
+        color: white;
+        font-family: inherit;
+        font-size: inherit;
+        border: none;
+        outline: none;
+        border-radius: 0.25rem;
+        cursor: pointer;
+      }
+    </style>
+
+    <script type="module">
+      const JQUERY_URL = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'
+
+      const buttonElement = document.querySelector('button')
+
+      const sayHi = () => jQuery('<div>Hello, World!</div>').appendTo('body')
+
+      const listenToButton = () => buttonElement.addEventListener('click', handleClick)
+
+      const stopListeningToButton = () => buttonElement.removeEventListener('click', handleClick)
+
+      const handleClick = () =>
+        import(JQUERY_URL)
+          .then(obj => sayHi())
+          .then(() => stopListeningToButton())
+          .catch(console.error)
+
+      listenToButton()
+    </script>
+
+    <script>
+      // This var is in the Global Scope
+      const buttonElement = 'a string'
+    </script>
+  </head>
+
+  <body>
+    <button>Import jQuery Dynamically</button>
+
+    <p>View page source for details.</p>
+  </body>
+</html>

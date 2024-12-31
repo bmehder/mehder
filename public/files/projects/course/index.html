@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Web Components</title>
+  </head>
+  <body>
+    <mfs-course
+      name="Biology"
+      image="https://myfunscience.com/wp-content/uploads/Biology-Img2-300x300.jpg"
+    >
+      <div slot="category">
+        <a
+          href="#"
+          style="text-decoration: none; font-weight: bold; cursor: pointer;"
+          >Science</a
+        >
+      </div>
+      <div slot="teacher">
+        <a
+          href="#"
+          style="text-decoration: none; font-weight: bold; cursor: pointer;"
+          >Heather Barrieau</a
+        >
+      </div>
+      <div slot="grades">10-12</div>
+      <div slot="term">Full Year 2020-2021</div>
+      <div slot="day">Tuesdays</div>
+      <div slot="time">1PM ET</div>
+      <div slot="length">90 minutes</div>
+      <div slot="sessions">30 weeks</div>
+      <div slot="email">teacher@email.com</div>
+      <div slot="phone">555.867.5309</div>
+    </mfs-course>
+
+    <script src="script.js"></script>
+  </body>
+</html>

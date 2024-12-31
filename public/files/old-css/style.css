@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 100vh;
+  background: #f4f4f4 url('../img/escape-flight.png') center center/contain;
+  overflow: hidden;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+body * {
+  z-index: 2;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0px 3rem;
+}
+
+h1 {
+  margin: 0;
+  color: darkorange;
+  font-size: 100px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+}
+
+h2 {
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+}
+
+button {
+  display: block;
+  width: 300px;
+  cursor: pointer;
+  background: darkorange;
+  color: white;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 16px;
+  font-size: 1.25em;
+  font-weight: bold;
+  margin: 3em auto;
+  padding: 1rem;
+  outline: 0;
+  transition: 300ms ease-in-out;
+}
+
+button:hover {
+  transform: scale(0.98);
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.5),
+    -2px -2px 4px rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 7rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding: 0.3rem;
+  }
+
+  h1 {
+    font-size: 6rem;
+    text-align: center;
+  }
+  h2 {
+    margin-top: 1em;
+    font-size: 2rem;
+  }
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+  background-color: white;
+  margin: 5% auto;
+  width: 80%;
+  max-width: 400px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 1),
+    0px -2px 2px rgba(102, 102, 102, 0.5);
+  animation-name: modalopen;
+  animation-duration: 0.5s;
+}
+.modal-header {
+  background: darkorange;
+  padding: 15px;
+  color: white;
+}
+.modal-header h2,
+.modal-footer h3 {
+  color: white;
+  text-align: center;
+}
+.modal-body {
+  padding: 10px 20px;
+}
+
+.form-group label,
+.form-group input,
+.form-group textarea,
+input[type='submit'] {
+  display: block;
+  width: 100%;
+}
+
+.form-group label {
+  color: rgba(0, 0, 0, 0.6);
+  margin: 20px 0 10px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.5em 1em;
+  font-size: 16px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+input[type='submit'] {
+  margin: 30px 0;
+  padding: 1em;
+  background-color: darkorange;
+  border: 0;
+  color: white;
+  border-radius: 4px;
+  font-size: 20px;
+  transition: 300ms;
+}
+
+input[type='submit']:hover {
+  transform: scale(0.98);
+}
+
+.modal-footer {
+  min-height: 20px;
+  background: darkorange;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+}
+.closeBtn {
+  color: black;
+  float: right;
+  font-size: 30px;
+}
+.closeBtn:hover,
+.closeBtn:focus {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+
+select,
+input[type='text'],
+input[type='submit'],
+textarea {
+  -webkit-appearance: none;
+  border: none !important;
+  border-radius: 0;
+  box-shadow: 0 20px 40px 10px rgba(0, 0, 0, 0.15),
+    0 -20px 40px -10px rgba(255, 255, 255, 0.9);
+}
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,140 @@
+:root {
+	color-scheme: dark light;
+	--max-width: 76rem;
+	--size: 1rem;
+	--size-2: calc(var(--size) * 2);
+	--primary: #bada55;
+	--accent: hsl(254, 50%, 50%);
+	--light: #ffffff;
+	--dark: #161616;
+  --font-size: 1.125rem;
+  --line-height: 1.7;
+  --heading-line-height: 1.25;
+}
+
+* {
+	box-sizing: border-box;
+	/* outline: 1px solid lime; */
+}
+
+body {
+	margin: 0;
+	font-family: system-ui, sans-serif;
+	font-size: var(--font-size);
+	line-height: var(--line-height);
+}
+
+h1,
+h2 {
+	line-height: var(--heading-line-height);
+}
+
+img,
+svg {
+	display: block;
+	width: 100%;
+	font-style: italic;
+}
+
+/* Utility classes */
+.balance {
+	text-wrap: balance;
+}
+
+.container {
+	container-type: inline-size;
+}
+
+/* Header */
+header {
+	.inner {
+		max-width: var(--max-width);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+    gap: var(--size);
+		margin-inline: auto;
+		padding-block: var(--size);
+		padding-inline: var(--size-2);
+	}
+
+	ul {
+		display: flex;
+		gap: var(--size-2);
+		padding: 0;
+		list-style: none;
+	}
+}
+
+/* Main & Sidebar */
+.main-content {
+	max-width: var(--max-width);
+	margin-inline: auto;
+
+	main {
+		padding-block: var(--size);
+		padding-inline: var(--size-2);
+	}
+
+	aside {
+		padding: var(--size-2);
+	}
+
+	:is(main, aside) > * + * {
+		margin-block-start: 2em;
+	}
+
+	@media (width > 48rem) {
+		display: grid;
+		grid-template-columns: 1fr 22rem;
+	}
+}
+
+/* Card */
+.card {
+	img {
+		height: 100%;
+		object-fit: cover;
+		object-position: right;
+	}
+
+	.content {
+		padding: var(--size-2);
+		padding-block-start: var(--size);
+	}
+
+	@container (width > 34rem) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+/* Skins */
+.skin-1 {
+	background-color: var(--primary);
+	color: var(--dark);
+	font-weight: 600;
+
+	button,
+	.button {
+		display: inline-block;
+		padding-block: var(--size);
+		padding-inline: var(--size-2);
+		background: var(--accent);
+		color: var(--light);
+		text-align: center;
+		text-transform: uppercase;
+		text-decoration: none;
+		letter-spacing: 1px;
+		border-radius: 4px;
+	}
+}
+
+.skin-2 {
+	background-color: var(--accent);
+
+	a {
+		color: var(--light);
+	}
+}
