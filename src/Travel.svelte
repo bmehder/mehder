@@ -4,7 +4,7 @@
 
 <div class="hidden">
   <div bind:this={travelContentElement}>
-    <h2>travel-me:$ 32 countries</h2>
+    <h2>travel:$ 32 countries</h2>
     <ul>
       <li>England</li>
       <li>Ireland</li>
