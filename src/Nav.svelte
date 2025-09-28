@@ -11,7 +11,7 @@
 			<a href="https://github.com/bmehder" target="_blank">/github</a>
 		</li>
 		<li>
-			<a href="https://github.com/bmehder" target="_blank">/npm</a>
+			<a href="https://www.npmjs.com/~bmehder" target="_blank">/npm</a>
 		</li>
 	</ul>
 </nav>
